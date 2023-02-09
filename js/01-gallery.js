@@ -38,11 +38,11 @@ document.addEventListener('click', (evt) => {
 
     const imgSelected = evt.target.getAttribute('data-source');
 
-    const card = basicLightBox.create(
+    const imgHolder = basicLightbox.create(
         `<img src='${imgSelected}' width="800" height="600">`,
         {
             onShow: () => {
-                document.addEventListener('keydown', openModal);
+                document.addEventListener('keydown', closeModal);
             },
             onClose: () => {
                 document.removeEventListener('keydown', closeModal);
@@ -50,11 +50,11 @@ document.addEventListener('click', (evt) => {
         }
     );
 
-    card.show();
+    imgHolder.show();
 
     function closeModal(evt) {
         if (evt.key === 'Escape') {
-            card.close();
+            imgHolder.close();
         }
     }
 });
