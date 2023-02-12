@@ -22,6 +22,7 @@ galleryItems.map((element) => {
 gallery.append(...items);
 
 new SimpleLightbox('.gallery a', {
-   captionDelay: 250,
+    captionPosition: 'bottom',
+    captionDelay: 250,
 });
     
