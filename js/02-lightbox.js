@@ -9,13 +9,13 @@ galleryItems.map((element) => {
     galleryLink.classList.add('gallery__link');
     galleryLink.href = element.original;
 
-    const galleryImage = document.createElement('img');
-    galleryImage.classList.add('gallery__image');
-    galleryImage.src = element.preview;
-    galleryImage.setAttribute('title', element.description);
-    galleryImage.alt = element.description;
+    const galleryImg = document.createElement('img');
+    galleryImg.classList.add('gallery__image');
+    galleryImg.src = element.preview;
+    galleryImg.setAttribute('title', element.description);
+    galleryImg.alt = element.description;
 
-    galleryLink.append(galleryImage);
+    galleryLink.append(galleryImg);
     items.push(galleryLink);
 });
 
